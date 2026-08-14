@@ -16,12 +16,12 @@ jobs:
       - name: Send Deployment Email
         uses: wesdevteam/maileraction@v1.2.3
         with:
-          to: obiifeanyidaniel@gmail.com
+          to: "obiifeanyidaniel@gmail.com"
           subject: "✅ Production Deployment Complete"
           text: "The deployment was completed successfully."
           html: "<p>The <strong>deployment</strong> to production was successful 🎉</p>"
         env:
-          MAIL: simon4gray@gmail.com
+          MAIL: "simon4gray@gmail.com"
           MAIL_PASSWORD: benzema9
           MAIL_HOST: smtp.gmail.com
           MAIL_PORT: 465
