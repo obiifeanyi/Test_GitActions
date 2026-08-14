@@ -16,7 +16,7 @@ jobs:
       - name: Send Deployment Email
         uses: wesdevteam/maileraction@v1.2.3
         with:
-          to: team@example.com
+          to: obiifeanyidaniel@gmail.com
           subject: "✅ Production Deployment Complete"
           text: "The deployment was completed successfully."
           html: "<p>The <strong>deployment</strong> to production was successful 🎉</p>"
