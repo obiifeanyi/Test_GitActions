@@ -9,6 +9,10 @@ jobs:
   send-email:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
       - name: Send Deployment Email
         uses: wesdevteam/maileraction@v1.2.3
         with:
@@ -17,7 +21,8 @@ jobs:
           text: "The deployment was completed successfully."
           html: "<p>The <strong>deployment</strong> to production was successful 🎉</p>"
         env:
-          MAIL: ${{ secrets.MAIL }}
+          MAIL: simon4gray@gmail.com
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
-          MAIL_HOST: ${{ secrets.MAIL_HOST }}
-          MAIL_PORT: 465
+          MAIL_HOST: smtp.gmail.com
+          MAIL_PORT: 587
+  
