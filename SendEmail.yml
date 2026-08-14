@@ -1,0 +1,23 @@
+name: Notify Team
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Deployment Email
+        uses: wesdevteam/maileraction@v1
+        with:
+          to: team@example.com
+          subject: "✅ Production Deployment Complete"
+          text: "The deployment was completed successfully."
+          html: "<p>The <strong>deployment</strong> to production was successful 🎉</p>"
+        env:
+          MAIL: ${{ secrets.MAIL }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_HOST: ${{ secrets.MAIL_HOST }}
+          MAIL_PORT: ${{ secrets.MAIL_PORT }}
