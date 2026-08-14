@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Deployment Email
-        uses: wesdevteam/maileraction@v1
+        uses: wesdevteam/maileraction@v2
         with:
           to: team@example.com
           subject: "✅ Production Deployment Complete"
