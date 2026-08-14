@@ -20,4 +20,4 @@ jobs:
           MAIL: ${{ secrets.MAIL }}
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
           MAIL_HOST: ${{ secrets.MAIL_HOST }}
-          MAIL_PORT: ${{ secrets.MAIL_PORT }}
+          MAIL_PORT: 465
