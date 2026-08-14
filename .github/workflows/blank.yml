@@ -8,6 +8,7 @@ on:
 jobs:
   send-email:
     runs-on: ubuntu-latest
+    environment: MailSetup
     steps:
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -22,7 +23,7 @@ jobs:
           html: "<p>The <strong>deployment</strong> to production was successful 🎉</p>"
         env:
           MAIL: "simon4gray@gmail.com"
-          MAIL_PASSWORD: nsvb scpg ocdt zexl
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
           MAIL_HOST: smtp.gmail.com
           MAIL_PORT: 465
   
