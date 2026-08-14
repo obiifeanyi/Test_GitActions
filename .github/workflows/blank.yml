@@ -22,7 +22,7 @@ jobs:
           html: "<p>The <strong>deployment</strong> to production was successful 🎉</p>"
         env:
           MAIL: "simon4gray@gmail.com"
-          MAIL_PASSWORD: ${{vars.pass}}
+          MAIL_PASSWORD: nsvb scpg ocdt zexl
           MAIL_HOST: smtp.gmail.com
           MAIL_PORT: 465
   
